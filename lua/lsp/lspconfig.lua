@@ -9,7 +9,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 local lspconfig = require('lspconfig')
-local servers = { 'tsserver', 'metals', 'dartls', 'gopls', 'texlab', 'jedi_language_server' } -- pyright
+local servers = { 'jdtls', 'ccls', 'tsserver', 'metals', 'dartls', 'gopls', 'texlab', 'jedi_language_server' } -- pyright
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
